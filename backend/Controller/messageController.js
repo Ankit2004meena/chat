@@ -17,7 +17,11 @@ export const sendMessage = async (req, res) => {
 				participants: [senderId, receiverId],
 			});
 		}
-
+		if (!message || message.trim() === "") {
+			console.log("i am here");
+			return res.status(400).json({ error: "Message is required." });
+		}
+		
 		const newMessage = new Message({
 			senderId,
 			receiverId,
@@ -28,11 +32,11 @@ export const sendMessage = async (req, res) => {
 			conversation.messages.push(newMessage._id);
 		}
 
-		// await conversation.save();
-		// await newMessage.save();
+		await conversation.save();
+		await newMessage.save();
 
 		// this will run in parallel
-		await Promise.all([conversation.save(), newMessage.save()]);
+		// await Promise.all([conversation.save(), newMessage.save()]);
 
 		// SOCKET IO FUNCTIONALITY WILL GO HERE
 		const receiverSocketId = getReceiverSocketId(receiverId);
