@@ -18,10 +18,10 @@ const Login = () => {
 		
 
 		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
-			<div className='h-full w-full py-5 px-5 bg-red-500 bg-clip-padding backdrop-filter  backdrop-blur-sm bg-opacity-50 backdrop-saturate-200 backdrop-contrast-200'>
+			<div className=' h-full w-full py-5 px-5 bg-red-500 bg-clip-padding backdrop-filter  backdrop-blur-sm bg-opacity-50 backdrop-saturate-200 backdrop-contrast-200'>
 			<h1>
-					Login
-					<span className='text-blue-500'> ChatApp</span>
+					Login  
+					<span className='text-white'>  CHAT MASTER  </span>
 				</h1>
 
 				<form onSubmit={handleSubmit}>
