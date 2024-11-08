@@ -40,7 +40,7 @@ const SignUp = () => {
 		<div className='flex flex-col items-center justify-center min-w-96 mx-auto'>
 			<div className='h-full w-full py-5 px-5 bg-red-500 bg-clip-padding backdrop-filter  backdrop-blur-sm bg-opacity-50 backdrop-saturate-200 backdrop-contrast-200'>
 				<h1 className='text-3xl font-semibold text-center text-gray-300'>
-					Sign Up <span className='text-blue-500'> ChatApp</span>
+					Sign Up <span className='text-red-500'> Chat-Master</span>
 				</h1>
 
 				
